@@ -1,0 +1,14 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "devDependencies": {
+    "cypress": "^9.6.1",
+    "log4js": "^6.5.1"
+  }
+}

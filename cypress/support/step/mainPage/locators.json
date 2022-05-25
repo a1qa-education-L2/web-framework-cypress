@@ -1,0 +1,5 @@
+{
+    "mainPage": "div.main-ofs",
+    "searchInput":"input#top-s", 
+    "searchButton":"button[class$='search__btn']"
+}

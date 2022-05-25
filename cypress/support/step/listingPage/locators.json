@@ -1,0 +1,6 @@
+{
+    "productCard": "div.item-type-card",
+    "sorting":"span[class$=filters__viewer__open]", 
+    "productPrice": "span.item-type-card__btn", 
+    "filterCheckbox":"input[data-title='{0}']"
+}
