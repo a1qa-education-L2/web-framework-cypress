@@ -14,17 +14,24 @@ module.exports = class StringUtils {
       return str.replace(/\s/g, '');
     }
 
-    static getNumbersFromString(str){
-      let numbersArray = str.match(/[+-]?\d+(\.\d+)?/g).map(function(v) { return parseFloat(v); });
-      return Number(numbersArray.join())
-    }
-
     static replaceCommaWithDot(string) {
       return string.replace(/,/, '.')
+    }
+    
+    static deleteSpaces(text) {
+	    return text.replace(/\s/g, '');
     }
 
     static format(string, word) {
       let formatted = string.replace(`{0}`, word);
       return formatted;
+    }
+
+    static getNumbersFromString(str){
+      let stringWithDot = this.replaceCommaWithDot(str);
+      let stringWithoutSpace = this.deleteSpaces(stringWithDot);
+      let numberArray = stringWithoutSpace.match(/[+-]?\d+(\.\d+)?/g)
+      let number = numberArray.map(stirng => parseFloat(stirng) );
+      return Number(number.join())
     }
 };

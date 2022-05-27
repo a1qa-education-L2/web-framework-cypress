@@ -25,7 +25,7 @@ Cypress.Commands.add('isPriceSortedAscending', { prevSubject: 'optional'}, (subj
     cy.infoLog(`Check is price sorting ascending`);
     cy.wrap(subject, { log: false }).then((element) => {
     let pricesArray = [...element].map(elem => elem.textContent).slice(0, productCount);
-    let prices = pricesArray.map(elem => StringUtils.getNumbersFromString(StringUtils.replaceCommaWithDot(elem)))
+    let prices = pricesArray.map(elem => StringUtils.getNumbersFromString(elem));
     expect(ArrayUtils.isNumberArraySortedAscending(prices)).to.be.true;   
     });
 });
